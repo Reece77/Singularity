@@ -58,8 +58,9 @@ IncludeCmd: yes
   cd /tmp/
   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   bash /tmp/Miniconda3-latest-Linux-x86_64.sh -b  
-  eval "$(/root/anaconda3/bin/conda shell.bash hook)"
+  eval "$(/root/miniconda3/bin/conda shell.bash hook)"
   conda install -c conda-forge umap-learn
+  conda clean --packages -y
   
   R --version
   
