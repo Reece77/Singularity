@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:18.04
+From: ubuntu:16.04
 IncludeCmd: yes
 
 %environment
@@ -39,7 +39,7 @@ IncludeCmd: yes
 
   #add CRAN/Ubuntu repo, add key, then refresh
    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-   apt-add-repository "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/"
+   apt-add-repository "deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/"
    apt-get update
 
   apt-get install -y wget nano
@@ -58,7 +58,7 @@ IncludeCmd: yes
   cd /tmp/
   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   bash /tmp/Miniconda3-latest-Linux-x86_64.sh -b  
-  eval "$(/root/miniconda3/bin/conda shell.bash hook)"
+  eval "$(/root/anaconda3/bin/conda shell.bash hook)"
   conda install -c conda-forge umap-learn
   conda clean --packages -y
   
