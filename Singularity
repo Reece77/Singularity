@@ -56,8 +56,8 @@ IncludeCmd: yes
   apt-get install -y r-base r-base-dev
   
   cd /tmp/
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-  bash /tmp/Miniconda3-latest-Linux-x86_64.sh -b  
+  wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+  bash /tmp/Anaconda3-2019.07-Linux-x86_64.sh -b  
   eval "$(/root/anaconda3/bin/conda shell.bash hook)"
   conda install -c conda-forge umap-learn
   conda clean --packages -y
